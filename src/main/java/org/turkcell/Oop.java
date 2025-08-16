@@ -15,5 +15,6 @@ public class Oop {
         car2.brand = "Toyota";
         car2.model = "Corolla";
         car2.startRent();
+        car2.endRent();
     }
 }
