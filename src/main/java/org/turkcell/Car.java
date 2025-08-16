@@ -3,15 +3,23 @@ package org.turkcell;
 public class Car {
     public String brand;
     public String model;
-    public int year;
+    private int year;
     public float km;
 
 
 // Her nesnenin içinde ctor(yapıcı blok) otomatik oluşur...
 // Ama istersek manuel oluşturup özelleştirme yapabiliriz...
-public Car(String brand){
+
+// All-args-Constructor
+public Car(String brand,String model, int year,float km){
+    this.brand=brand; // this=> Classın kendisini ifade eder...
+    this.model=model;
+    this.year=year;
+    this.km=km;
     System.out.println("1. Ctor bloğu...");
 }
+
+// No-args-Constructor...
 public Car(){
     System.out.println("2. ctor bloğu");
 }
@@ -19,11 +27,29 @@ public Car(){
 
 
     public void startRent(){
-        System.out.println("Kiralama başladı...");
+        System.out.println("Kiralama başladı..."+ this.brand);
     }
     public void endRent(){
         System.out.println("Kiralama bitti...");
     }
+
+// Getter-setter methods
+    // Setter methods
+    public void setYear(int year){
+        if (year<200){
+            System.out.println("Yıl 2000'den küçük olamaz...");
+            return;
+        }
+        this.year=year;
+    }
+    // Getter methods
+    public int getYear(){
+        return this.year;
+    }
+
+
+
+
 }
 /*
     Erişim Belirliyiciler:
