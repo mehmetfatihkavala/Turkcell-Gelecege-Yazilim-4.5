@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //UserDal, UserDao
-public class UserRepository {
+public class UserRepository implements BaseRepository<User> {
 
     List<User> users =new ArrayList<>();
 
@@ -18,5 +18,10 @@ public class UserRepository {
     }
     public void save(User user){
         users.add(user);
+    }
+
+    @Override
+    public void delete(User user) {
+
     }
 }
