@@ -1,4 +1,4 @@
-package org.turkcell;
+package org.turkcell.intro;
 
 import java.util.Scanner;
 
